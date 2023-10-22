@@ -32,7 +32,7 @@ body{
                          'main'
                          'libros'
                          'comics'
-                         'footer';
+                         'BotonesFooter';
    
  }
 .Header{
@@ -41,7 +41,7 @@ body{
     height: 11lvh;
     background-color: var(--Separadores);
     background-image: url(https://besthqwallpapers.com/Uploads/9-11-2019/110636/thumb2-brown-paper-texture-4k-brown-crumpled-paper-macro-brown-paper.jpg);
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     & .logo {
@@ -184,16 +184,21 @@ body{
         height: 60lvh;
     }
 }
-.Footer{grid-area:'footer';
+
+
+.Footer{
+    grid-area:'BotonesFooter';
     background-color: var(--Separadores);
     background-image: url(https://besthqwallpapers.com/Uploads/9-11-2019/110636/thumb2-brown-paper-texture-4k-brown-crumpled-paper-macro-brown-paper.jpg);
     height: 20lvh;
-    width: 100%;
+    width: 100vw;
     position: relative;
     display: flex;
     justify-content: space-between;
     padding-left: 15%;
-    .BotonesFooter{
+
+    & .BotonesFooter{
+        
         display: flex;
         justify-content: space-between;
         padding: 75px 13px;
@@ -205,23 +210,40 @@ body{
             text-align: center;
             border-radius: 15px;
             padding: 20px;
-         }
-        .Registro{ background-color: var(--Titulos);
-            color: var(--Letra);
-           }
-        }
 
         & a:hover{
             color: var(--Titulos); 
             transform: translate(0,-10%);
             transition: .5s ease;
+        }  
+         }
+        .Registro{ background-color: var(--Titulos);
+            color: var(--Letra);
+            cursor: pointer;
+            animation: bounce 1s linear;
+           }
         }
-        .Registro:hover{
-            background-color: var(--Letra);
-            color: var(--Titulos);
-            transform: translate(0,-10%);
-            transition: .5s ease;
+
+    @keyframes bounce {
+        20%,50%,80%,to{
+            transform: translateY(0)
         }
+        40%{
+            transform: translateY(-30px)
+        }                                   
+        70%{
+            transform: translateY(-15px)
+        }
+        90%{
+            transform: translateY(-4px)
+        }
+    }
+        
+    .Registro:hover{
+        animation: bounce 1s linear;
+    }
+
+        
 
 }
 
