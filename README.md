@@ -1,4 +1,4 @@
-﻿# Trabajo-Python-
+﻿# Trabajo Práctico - Grupo 17
  Documentación Preliminar del Proyecto – Biblioteca online de consulta de libros con funcionamiento similar a una plataforma de streamming
 
 1. Título y Descripción del Proyecto:
